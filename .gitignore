@@ -1,13 +1,7 @@
 # Ignore all files
 
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
+Self learn/Python for Data Science/.ipynb_checkpoints/*
 
-# IPython
-profile_default/
-ipython_config.py
-
-*checkpoint*
 
 # Except .md, .py, and .ipynb files
 Reference material/*
