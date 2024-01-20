@@ -1,8 +1,6 @@
 # Ignore all files
 
-Self learn/Python for Data Science/.ipynb_checkpoints
+Self learn/Python for Data Science/.ipynb_checkpoints/*
 
-
-# Except .md, .py, and .ipynb files
 Reference material/*
 
