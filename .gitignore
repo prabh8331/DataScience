@@ -1,6 +1,23 @@
-# Ignore all files
-
-Self learn/Python for Data Science/.ipynb_checkpoints/*
-
-Reference material/*
-
+# Reference material/*
+*.zip
+*.csv
+*.pdf
+*.data
+*.xlsx
+*.docx
+*.xls
+*.txt
+3*.ipynb
+4*.ipynb
+5*.ipynb
+6*.ipynb
+7*.ipynb
+8*.ipynb
+9*.ipynb
+10*.ipynb
+11*.ipynb
+12*.ipynb
+13*.ipynb
+13*.md
+Reference material/Tableau Training/Datasets_Dec_2022/Datasets_Dec_2022/Sample - Coffee Chain.mdb
+Reference material/Tableau Training/Datasets_Dec_2022/Datasets_Dec_2022/Sales_inventory_analysis.accdb
