@@ -1,5 +1,6 @@
-*
+# Ignore all files
 
-!*.py
-!*.ipynb
-!*.md
+*.csv
+
+# Except .md, .py, and .ipynb files
+Reference material/*
