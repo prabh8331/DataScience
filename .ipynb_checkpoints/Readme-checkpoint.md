@@ -1,2 +1,0 @@
-# Simplilearn Data Science Program
-
