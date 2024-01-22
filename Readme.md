@@ -1,10 +1,5 @@
 # Simplilearn Data Science Program
 
-
-
-
-
-
 ## Anaconda setup on ubuntu server
 
 https://docs.anaconda.com/free/anaconda/install/linux/
@@ -60,9 +55,29 @@ sudo docker run -i -t -p 8888:8888 continuumio/miniconda3 /bin/bash \
 --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 \
 --no-browser --allow-root"
 
-sudo docker run -i -t -p 8888:8888 -v /home/userver/DataScience:/opt/notebooks --restart always continuumio/miniconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+# sudo docker run -i -t -p 8888:8888 -v /home/userver/DataScience:/opt/notebooks --restart always continuumio/miniconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+
+# sudo docker run -i -t -p 8888:8888 -v /home/userver:/opt/notebooks --restart always continuumio/miniconda3 /bin/bash -c "source activate base && /opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+
+
+# run this wiyh out sudo to use userer user previlages
+sudo usermod -aG docker $USER
+sudo chown $USER:docker /var/run/docker.sock
+
+
+# sudo docker run -i -t -p 8888:8888 -v /home/userver:/opt/notebooks --restart always continuumio/miniconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+
+
+# docker run -i -t -p 8888:8888 -v /home/userver:/opt/notebooks --user $(id -u):$(id -g) --restart always continuumio/miniconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+
+
+sudo chown -R userver:userver /home/userver/DataScience
+ls -l /home/userver/DataScience 
+
+docker run -i -t -p 8888:8888 -v /home/userver:/opt/notebooks --restart always continuumio/miniconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
 
 ```
+
 
 
 setup git
@@ -70,7 +85,7 @@ setup git
 # open terminal in jupyter
 cd /opt/notebooks
 
-git config --global --add safe.directory /opt/notebooks
+git config --global --add safe.directory /opt/notebooks/DataScience
 git status
 git pull origin master
 

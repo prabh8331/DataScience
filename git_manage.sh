@@ -1,5 +1,5 @@
 # initial setup needed
-# git config --global --add safe.directory /opt/notebooks
+# git config --global --add safe.directory /opt/notebooks/DataScience
 # git config --global user.name "prabh8331"
 # git config --global user.email "prabh8331@gmail.com"
 
@@ -11,6 +11,7 @@
 # cat ~/.ssh/id_rsa.pub
 
 
+# cd /opt/notebooks/DataScience
 
 # auto pull, add, commit and push
 # bash /opt/notebooks/git_manage.sh
@@ -19,3 +20,5 @@ git pull origin master
 git add .
 git commit -m "auto commit"
 git push origin master
+
+

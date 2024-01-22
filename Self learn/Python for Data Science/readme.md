@@ -14,6 +14,7 @@ How to operate on files to read and write data in Python
 How to use pandas, a must-have package for anyone attempting data analysis in Python
 
 
+
 ## Syllabus
 ### Module 1 - Python Basics
 
